@@ -15,10 +15,10 @@ I created this portfolio using react and deployed at https://www.carolinarizk.de
 
 ---
 <a href="https://github.com/crizk-crizk/github-readme-stats">
-<img align="center" alt="Carolina's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=crizk-crizk&hide=stars&show_icons=true&hide_border=true&bg_color=DEG,a94ee6,d8bfdb,d079db,6b54d6" />
+<img alt="Carolina's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=crizk-crizk&hide=stars&show_icons=true&hide_border=true&bg_color=DEG,a94ee6,d8bfdb,d079db,6b54d6" target="_blank" />
 </a>
 <a href="https://github.com/crizk-crizk/convoychat">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=crizk-crizk&layout=compact&hide_border=true&bg_color=DEG,a94ee6,d8bfdb,d079db,6b54d6" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=crizk-crizk&layout=compact&hide_border=true&bg_color=DEG,a94ee6,d8bfdb,d079db,6b54d6"  />
 </a>
 
 [website]: https://www.carolinarizk.dev/
