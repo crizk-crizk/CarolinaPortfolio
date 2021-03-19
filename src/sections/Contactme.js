@@ -1,19 +1,45 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import FormContainer from "../components/FormContainer";
+import emailjs from "emailjs-com";
 
-
+const {
+  REACT_APP_TEMPLATEID,
+  REACT_APP_SERVICEID,
+  REACT_APP_USERID,
+} = process.env;
 
 const Contactme = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit= (event)=>{
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log("form submitted");
 
+    const templateParams = {
+      from_name: name,
+      message,
+      reply_to: email,
+    };
 
+    emailjs
+      .send(
+        REACT_APP_SERVICEID,
+        REACT_APP_TEMPLATEID,
+        templateParams,
+        REACT_APP_USERID
+      )
+      .then((response) => {
+        alert(`SUCCESS! Thank you for messaging me. \nI'll get back to you soon. \n🙋🏽‍♀️ Carolina`);
+        setEmail("");
+        setName("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+      });
   };
 
   return (
@@ -27,16 +53,16 @@ const Contactme = () => {
               type="text"
               placeholder="eg. John Smith"
               value={name}
-              onChange={(event)=>setName(event.target.value)}
+              onChange={(event) => setName(event.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="email">
             <Form.Label> Your Email </Form.Label>
             <Form.Control
-              type="text"
+              type="email"
               placeholder="JohnSmith@email.com"
               value={email}
-              onChange={(event)=>setEmail(event.target.value)}
+              onChange={(event) => setEmail(event.target.value)}
             />
           </Form.Group>
           <Form.Group controlId="massage">
@@ -46,7 +72,7 @@ const Contactme = () => {
               as="textarea"
               placeholder="Hi, I want to hire you... "
               value={message}
-              onChange={(event)=>setMessage(event.target.value)}
+              onChange={(event) => setMessage(event.target.value)}
             />
           </Form.Group>
           <Button variant="light" type="submit">

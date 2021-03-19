@@ -8,30 +8,37 @@
   width: 100%;
   left: 0;
   top: 0;
-  padding-top: 50px;
+  padding-top: 150px;
 }
 #mywork{
   position: absolute;
   width: 100%;
   left: 0;
-  top: 100vh;
+  top: 200vh;
 }
 #contact {
   position: absolute;
     width: 100%;
     left: 0;
-    top: 200vh;
+    top: 100vh;
   }
   footer {
     position: absolute;
       width: 100%;
       left: 0;
-      top: 300vh;
+      top: 480vh;
       text-align: center;
       background-color: #abb6c2;
       color: black;
+      font-size: 16px;
     }
 .face{
   width: 200px;
   border-radius: 50%;
-}    
+}
+#sticky {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+}

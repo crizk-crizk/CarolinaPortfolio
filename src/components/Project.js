@@ -3,7 +3,7 @@ import { Card, Row, Col } from "react-bootstrap";
 
 const Project = ({ project }) => {
   return (
-    <Row>
+    <Row className="m-3">
       <Col sm={12} md={6}>
         <img style={{ width: "100%" }} src={project.image} />
       </Col>
@@ -12,8 +12,8 @@ const Project = ({ project }) => {
           <Card.Title>{project.title}</Card.Title>
           <Card.Body>
             <Card.Text>
-              {project.tech.map((techItem) => {
-                return <span>{techItem}</span>;
+              {project.tech.map((techItem, i) => {
+                return <span key={i}>{techItem}</span>;
               })}
             </Card.Text>
             <Card.Text>{project.description}</Card.Text>
