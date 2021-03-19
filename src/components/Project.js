@@ -5,7 +5,7 @@ const Project = ({ project }) => {
   return (
     <Row className="m-3">
       <Col sm={12} md={6}>
-        <img style={{ width: "100%" }} src={project.image} />
+        <img style={{ width: "100%" }} src={project.image} alt="Link to project"/>
       </Col>
       <Col sm={12} md={6}>
         <Card>
