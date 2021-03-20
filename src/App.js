@@ -13,8 +13,8 @@ function App() {
       <About />
       <Contactme />
       <Portfolio />
-      <Footer />
     </div>
+      <Footer />
     </>
   );
 }
