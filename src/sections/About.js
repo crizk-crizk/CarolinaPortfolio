@@ -8,13 +8,16 @@ import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 const About = () => {
   const [size, setSize] = useState(window.innerWidth);
   useEffect(() => {
-    window.addEventListener("resize", () => {
-      setSize(window.innerWidth);
-
-    });
+    window.addEventListener("resize", sizingWindow);
+    return () => {
+      window.removeEventListener("resize", sizingWindow);
+    };
   }, []);
+  const sizingWindow = () => setSize(window.innerWidth);
+
   const iconSize = size < 800 ? "4x" : "10x";
   const iconClass = size < 755 ? "iconsSmallScreen" : "icons";
+  
   return (
     <div id="about">
       <Container>
@@ -30,8 +33,8 @@ const About = () => {
             <img className="face" src="/images/face.jpeg" alt="face" />
           </Col>
         </Row>
-{/* -------------------------- */}
-        <Row className={iconClass} >
+        {/* -------------------------- */}
+        <Row className={iconClass}>
           <Col className="contactIcon" sm={4} md={4}>
             <a
               href="http://linkedin.com/in/carolina-rizk"
