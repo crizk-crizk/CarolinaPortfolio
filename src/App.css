@@ -1,7 +1,8 @@
 .home {
   width: 100%;
   position: relative;
-  
+  padding-bottom: 50px;
+  font-family: "IBM Plex Mono", monospace;
 }
 #about {
   position: absolute;
@@ -10,29 +11,31 @@
   top: 0;
   padding-top: 150px;
 }
-#mywork{
+#mywork {
   position: absolute;
   width: 100%;
   left: 0;
   top: 200vh;
+  padding-bottom: 100px;
 }
 #contact {
   position: absolute;
-    width: 100%;
-    left: 0;
-    top: 100vh;
-  }
-  footer {
-    position: absolute;
-      width: 100%;
-      left: 0;
-      top: 480vh;
-      text-align: center;
-      background-color: #abb6c2;
-      color: black;
-      font-size: 16px;
-    }
-.face{
+  width: 100%;
+  left: 0;
+  top: 100vh;
+  padding-top: 80px;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #abb6c2;
+  color: black;
+  font-size: 16px;
+}
+.face {
   width: 200px;
   border-radius: 50%;
 }
@@ -41,4 +44,15 @@
   top: 0;
   z-index: 5;
   width: 100%;
+}
+.contactIcon {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+}
+.icons{
+  margin-top: 120px;
+}
+.iconsSmallScreen {
+  margin-top: 50px;
 }
