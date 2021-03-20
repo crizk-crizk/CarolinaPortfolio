@@ -5,11 +5,16 @@ const Project = ({ project }) => {
   return (
     <Row className="m-3">
       <Col sm={12} md={6}>
-        <img style={{ width: "100%" }} src={project.image} alt="Link to project"/>
+        <img
+          className="projectCard"
+          style={{ width: "100%" }}
+          src={project.image}
+          alt="Link to project"
+        />
       </Col>
       <Col sm={12} md={6}>
-        <Card>
-          <Card.Title>{project.title}</Card.Title>
+        <Card className="projectCard">
+          <Card.Title className="projectTitle">{project.title}</Card.Title>
           <Card.Body>
             <Card.Text>
               {project.tech.map((techItem, i) => {
@@ -17,9 +22,13 @@ const Project = ({ project }) => {
               })}
             </Card.Text>
             <Card.Text>{project.description}</Card.Text>
-            <Card.Text>
-              <a href={project.github}> GitHub</a>
-              <a href={project.deployed}> Live Site</a>
+            <Card.Text className="projectLinks">
+              <a href={project.github} target="_blank" rel="noreferrer">
+                GitHub &nbsp;&nbsp;
+              </a>
+              <a href={project.deployed} target="_blank" rel="noreferrer">
+                Live Site
+              </a>
             </Card.Text>
           </Card.Body>
         </Card>

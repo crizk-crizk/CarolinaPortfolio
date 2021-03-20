@@ -56,3 +56,19 @@ footer {
 .iconsSmallScreen {
   margin-top: 50px;
 }
+.projectTitle {
+  color: #ffc0cb;
+  font-weight: bolder !important;
+  font-size: 34px !important;
+  text-align: center;  
+  -webkit-text-stroke: 0.001px rgb(244, 144, 160);
+}
+.projectLinks {
+  text-align: center;
+}
+.projectCard {
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 1px rgb(255,255,255),
+        2.3em 0.3em 1em rgba(0,0,0,0.3);
+}
